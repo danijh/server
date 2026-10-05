@@ -183,3 +183,6 @@ core/js/mimetypelist.js
 /cypress
 
 /.direnv
+
+# Local development TLS certificates
+/dev/certs/
