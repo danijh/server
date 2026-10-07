@@ -50,7 +50,6 @@
 		<personal>OCA\Settings\Settings\Personal\Additional</personal>
 		<personal>OCA\Settings\Settings\Personal\ProfileContact</personal>
 		<personal>OCA\Settings\Settings\Personal\LanguageLocale</personal>
-		<personal>OCA\Settings\Settings\Personal\ServerDevNotice</personal>
 		<personal>OCA\Settings\Settings\Personal\Security\Authtokens</personal>
 		<personal>OCA\Settings\Settings\Personal\Security\Password</personal>
 		<personal>OCA\Settings\Settings\Personal\Security\TwoFactor</personal>
