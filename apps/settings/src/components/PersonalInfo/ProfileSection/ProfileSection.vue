@@ -13,7 +13,7 @@
 		<NcFormBox>
 			<NcFormBoxSwitch
 				:model-value="profileEnabled"
-				:label="t('settings', 'Nextcloud profile')"
+				:label="profileLabel"
 				:disabled="loading"
 				@update:modelValue="saveEnableProfile" />
 			<NcFormBoxButton
@@ -42,6 +42,7 @@ import ProfilePreviewCard from './ProfilePreviewCard.vue'
 import { ACCOUNT_PROPERTY_ENUM } from '../../../constants/AccountPropertyConstants.js'
 import { savePrimaryAccountProperty } from '../../../service/PersonalInfo/PersonalInfoService.js'
 import { handleError } from '../../../utils/handlers.ts'
+const productName = window.OC.theme.productName
 
 const {
 	statusMessage,
@@ -72,6 +73,9 @@ export default {
 	},
 
 	computed: {
+		profileLabel() {
+			return t('settings', '{productName} profile', { productName })
+		},
 		profilePageLink() {
 			return generateUrl('/u/{userId}', { userId: getCurrentUser().uid })
 		},
