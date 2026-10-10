@@ -47,7 +47,7 @@
 							</template>
 						</NcFormBoxButton>
 						<NcFormBoxButton
-							:label="t('settings', 'Choose from Nextcloud Files')"
+							:label="t('settings', 'Choose from {productName} Files', { productName })"
 							@click="openFilePicker">
 							<template #icon>
 								<Folder :size="20" />
@@ -133,6 +133,7 @@ export default {
 
 	data() {
 		return {
+			productName: window.OC.theme.productName,
 			avatar: { ...avatar, readable: NAME_READABLE_ENUM[avatar.name] },
 			avatarChangeSupported,
 			profileEnabledGlobally,
